@@ -20,6 +20,5 @@ rustPlatform.buildRustPackage rec {
     description = "Decompress / compress mozlz4 files";
     homepage = "https://github.com/jusw85/${pname}";
     license = licenses.mit;
-    maintainers = with maintainers; [ vladexa ];
   };
 }
