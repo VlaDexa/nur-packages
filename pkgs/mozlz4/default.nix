@@ -14,9 +14,7 @@ rustPlatform.buildRustPackage rec {
     hash = "sha256-csLtrErA0miCPMJMOXrDGH9RlszpZPyPSaA+zToaEzQ=";
   };
 
-  cargoLock = {
-    lockFile = "${src}/Cargo.lock";
-  };
+  cargoHash = "sha256-9mCMRvuWHkVBWX9BftGYtjhvePEjWptHqnXfW+vlUNs=";
 
   meta = with lib; {
     description = "Decompress / compress mozlz4 files";
