@@ -18,7 +18,7 @@
 
   mozlz4 = pkgs.callPackage ./pkgs/mozlz4 { };
   arangodb = pkgs.callPackage ./pkgs/arangodb/package.nix {
-    stdenv = pkgs.overrideCC pkgs.stdenv pkgs.gcc10;
+    stdenv = pkgs.overrideCC pkgs.stdenv pkgs.gcc13;
   };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
