@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage {
     hash = "sha256-csLtrErA0miCPMJMOXrDGH9RlszpZPyPSaA+zToaEzQ=";
   };
 
-  cargoHash = "sha256-9mCMRvuWHkVBWX9BftGYtjhvePEjWptHqnXfW+vlUNs=";
+  cargoHash = "sha256-8FXjJ6hLJk9H5VEmjD1vM81lZkB8ZYFiypjkgTzZhNU=";
 
   meta = with lib; {
     description = "Decompress / compress mozlz4 files";
@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage {
         githubId = 52157081;
       }
     ];
+    mainProgram = "mozlz4";
   };
 }
