@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     repo = "arangodb";
     owner = "arangodb";
     tag = "v${finalAttrs.version}";
+    # rev = "31b0e460c1f941f939b5fbd07d49989e75c75083";
     hash = "sha256-KYVu6cdeuYlQ554oYel64TXfH9lqL82LbEdINcOtm0E=";
     fetchSubmodules = true;
   };
@@ -54,6 +55,8 @@ stdenv.mkDerivation (finalAttrs: {
   # prevent failing with "cmake-3.13.4/nix-support/setup-hook: line 10: ./3rdParty/rocksdb/RocksDBConfig.cmake.in: No such file or directory"
   dontFixCmake = true;
   env.NIX_CFLAGS_COMPILE = "-Wno-error";
+
+  enableParallelBuilding = true;
 
   postPatch = ''
     sed -i -e 's!/bin/echo!echo!' 3rdParty/V8/gypfiles/*.gypi
