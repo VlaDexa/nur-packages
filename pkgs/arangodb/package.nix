@@ -89,9 +89,13 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Native multi-model database with flexible data models for documents, graphs, and key-values";
     license = licenses.asl20;
     platforms = [ "x86_64-linux" ];
-    maintainers = with maintainers; [
-      flosse
-      jsoo1
+    maintainers = [
+      {
+        email = "vgrechannik@gmail.com";
+        name = "Vladislav Grechannik";
+        github = "VlaDexa";
+        githubId = 52157081;
+      }
     ];
   };
 })
