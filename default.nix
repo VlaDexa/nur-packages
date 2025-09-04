@@ -20,6 +20,7 @@
   arangodb = pkgs.callPackage ./pkgs/arangodb/package.nix {
     stdenv = pkgs.overrideCC pkgs.stdenv pkgs.gcc13;
   };
+  SteamTokenDumper = pkgs.callPackage ./pkgs/SteamTokenDumper/package.nix { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
