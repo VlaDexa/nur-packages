@@ -7,7 +7,8 @@
 #     nix-build -A mypackage
 
 {
-  pkgs ? import <nixpkgs> { },
+  crossSystem ? null,
+  pkgs ? import <nixpkgs> { inherit crossSystem; },
 }:
 
 {
