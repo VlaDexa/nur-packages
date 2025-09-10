@@ -22,6 +22,7 @@
     stdenv = pkgs.overrideCC pkgs.stdenv pkgs.gcc13;
   };
   SteamTokenDumper = pkgs.callPackage ./pkgs/SteamTokenDumper/package.nix { };
+  h3get = pkgs.callPackage ./pkgs/h3get/package.nix { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
