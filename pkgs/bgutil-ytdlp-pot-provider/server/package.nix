@@ -5,17 +5,23 @@
   lib,
   libjpeg,
   librsvg,
+  meta,
   nodejs,
   pango,
   pixman,
   pkg-config,
+  src,
   typescript,
   version,
-  src,
   ...
 }:
 buildNpmPackage (finalAttrs: {
-  inherit nodejs src version;
+  inherit
+    nodejs
+    src
+    version
+    meta
+    ;
 
   pname = "bgutil-ytdlp-pot-provider";
 
@@ -58,19 +64,4 @@ buildNpmPackage (finalAttrs: {
 
     runHook postInstall
   '';
-
-  meta = {
-    description = "Proof-of-origin token provider plugin for yt-dlp";
-    homepage = "https://github.com/Brainicism/bgutil-ytdlp-pot-provider";
-    license = lib.licenses.gpl3Plus;
-    mainProgram = "bgutil-ytdlp-pot-provider";
-    maintainers = [
-      {
-        email = "vgrechannik@gmail.com";
-        name = "Vladislav Grechannik";
-        github = "VlaDexa";
-        githubId = 52157081;
-      }
-    ];
-  };
 })
