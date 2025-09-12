@@ -1,6 +1,7 @@
 {
   buildNpmPackage,
   cairo,
+  fetchFromGitHub,
   giflib,
   lib,
   libjpeg,
@@ -10,7 +11,6 @@
   pango,
   pixman,
   pkg-config,
-  src,
   typescript,
   version,
   ...
@@ -18,12 +18,18 @@
 buildNpmPackage (finalAttrs: {
   inherit
     nodejs
-    src
     version
     meta
     ;
 
-  pname = "bgutil-ytdlp-pot-provider";
+  pname = "bgutil-ytdlp-pot-provider-server";
+
+  src = fetchFromGitHub {
+    owner = "Brainicism";
+    repo = "bgutil-ytdlp-pot-provider";
+    rev = version;
+    hash = "sha256-KKImGxFGjClM2wAk/L8nwauOkM/gEwRVMZhTP62ETqY=";
+  };
 
   sourceRoot = "${finalAttrs.src.name}/server";
 
